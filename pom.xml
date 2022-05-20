@@ -10,11 +10,12 @@
 	</parent>
 	<groupId>com.github.himeraoO</groupId>
 	<artifactId>mobile-review-telegrambot</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.2.0-SNAPSHOT</version>
 	<name>Mobile-review TelegramBot</name>
 	<description>Telegram bot for mobile-review.com for me</description>
 	<properties>
 		<java.version>11</java.version>
+		<telegrambot.starter.version>6.0.1</telegrambot.starter.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -31,7 +32,7 @@
 		<dependency>
 			<groupId>org.telegram</groupId>
 			<artifactId>telegrambots-spring-boot-starter</artifactId>
-			<version>6.0.1</version>
+			<version>${telegrambot.starter.version}</version>
 		</dependency>
 	</dependencies>
 
