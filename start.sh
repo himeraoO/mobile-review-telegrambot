@@ -13,6 +13,8 @@ docker-compose stop
 # Add environment variables
 export BOT_NAME=$1
 export BOT_TOKEN=$2
+export BOT_DB_USERNAME='prod_mrtb_db_user'
+export BOT_DB_PASSWORD='hgdfrtrstjl1chykytdsr65hserw4A'
 
 # Start new deployment
 docker-compose up --build -d
