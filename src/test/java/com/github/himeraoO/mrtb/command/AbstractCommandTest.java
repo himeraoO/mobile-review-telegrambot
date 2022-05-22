@@ -3,6 +3,8 @@ package com.github.himeraoO.mrtb.command;
 import com.github.himeraoO.mrtb.bot.MobileReviewTelegramBot;
 import com.github.himeraoO.mrtb.service.SendBotMessageService;
 import com.github.himeraoO.mrtb.service.SendBotMessageServiceImpl;
+import com.github.himeraoO.mrtb.service.TelegramUserService;
+import com.github.himeraoO.mrtb.service.TelegramUserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -17,6 +19,7 @@ abstract class AbstractCommandTest {
 
     protected MobileReviewTelegramBot mobileReviewTelegramBot = Mockito.mock(MobileReviewTelegramBot.class);
     protected SendBotMessageService sendBotMessageService = new SendBotMessageServiceImpl(mobileReviewTelegramBot);
+    protected TelegramUserService telegramUserService = Mockito.mock(TelegramUserService.class);
 
     abstract String getCommandName();
 

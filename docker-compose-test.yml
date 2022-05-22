@@ -1,26 +1,15 @@
 version: '3.1'
 
 services:
-  mrtb-bot:
-    depends_on:
-      - mrtb-db
-    build:
-      context: .
-    environment:
-      BOT_NAME: ${BOT_NAME}
-      BOT_TOKEN: ${BOT_TOKEN}
-      BOT_DB_USERNAME: ${BOT_DB_USERNAME}
-      BOT_DB_PASSWORD: ${BOT_DB_PASSWORD}
-    restart: always
-  mrtb-db:
+  mrtb-db-dev:
     image: mysql
     restart: always
     environment:
-      MYSQL_DATABASE: 'mrtb_db'
+      MYSQL_DATABASE: 'dev_mrtb_db'
       # So you don't have to use root, but you can if you like
-      MYSQL_USER: ${BOT_DB_USERNAME}
+      MYSQL_USER: 'dev_mrtb_db_user'
       # You can use whatever password you like
-      MYSQL_PASSWORD: ${BOT_DB_PASSWORD}
+      MYSQL_PASSWORD: 'dev_mrtb_db_password'
       # Password for root access
       MYSQL_ROOT_PASSWORD: 'root'
     ports:
