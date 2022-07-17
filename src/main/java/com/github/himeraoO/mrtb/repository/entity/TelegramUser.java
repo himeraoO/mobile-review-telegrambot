@@ -3,10 +3,9 @@ package com.github.himeraoO.mrtb.repository.entity;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+import javax.persistence.*;
+import java.util.List;
 
 /**
  * Telegram User entity.
@@ -14,7 +13,7 @@ import javax.persistence.Table;
 @Setter
 @Getter
 @Entity
-@EqualsAndHashCode
+@EqualsAndHashCode(exclude = "groupSubs")
 @Table(name = "tg_user")
 public class TelegramUser {
 
@@ -24,5 +23,8 @@ public class TelegramUser {
 
     @Column(name = "active")
     private boolean active;
+
+    @ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
+    private List<GroupSub> groupSubs;
 }
 
