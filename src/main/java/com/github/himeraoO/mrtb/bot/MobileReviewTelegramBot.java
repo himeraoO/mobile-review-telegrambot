@@ -1,6 +1,8 @@
 package com.github.himeraoO.mrtb.bot;
 
 import com.github.himeraoO.mrtb.command.CommandContainer;
+import com.github.himeraoO.mrtb.mrtbclient.MRGroupClient;
+import com.github.himeraoO.mrtb.service.GroupSubService;
 import com.github.himeraoO.mrtb.service.SendBotMessageServiceImpl;
 import com.github.himeraoO.mrtb.service.TelegramUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +30,8 @@ public class MobileReviewTelegramBot extends TelegramLongPollingBot {
     private final CommandContainer commandContainer;
 
     @Autowired
-    public MobileReviewTelegramBot(TelegramUserService telegramUserService) {
-        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this), telegramUserService);
+    public MobileReviewTelegramBot(TelegramUserService telegramUserService, MRGroupClient mrGroupClient, GroupSubService groupSubService) {
+        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this), telegramUserService, mrGroupClient, groupSubService);
     }
 
     @Override
