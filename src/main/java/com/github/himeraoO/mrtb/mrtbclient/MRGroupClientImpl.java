@@ -56,4 +56,5 @@ public class MRGroupClientImpl implements MRGroupClient{
         return groupInfos.stream().filter(groupInfo1 ->
             groupInfo1.getId().equals(id)).findFirst().orElseThrow(NotFoundException::new);
     }
+
 }

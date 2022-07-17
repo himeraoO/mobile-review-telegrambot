@@ -11,9 +11,7 @@ public interface MRGroupClient {
 
     List<GroupInfo> getGroupList();
 
-
     Integer getGroupCount();
-
 
     GroupInfo getGroupById(Integer id);
 }
