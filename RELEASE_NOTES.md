@@ -22,3 +22,7 @@
 *   MRTB-6: added command /listGroupSub for get a list of group subscriptions. 
 *   MRTB-9: added /start command
 *   MRTB-8: added /stop command
+
+## 0.6.0-SNAPSHOT
+
+*   MRTB-7: added command /removeGroupSub for delete group subscription.
