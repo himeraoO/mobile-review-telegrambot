@@ -42,6 +42,7 @@ public class GroupSubServiceImpl implements GroupSubService {
             groupSub.addUser(telegramUser);
             groupSub.setId(groupInfo.getId());
             groupSub.setTitle(groupInfo.getTitle());
+            groupSub.setLastArticleId(0);
         }
         return groupSubRepository.save(groupSub);
     }

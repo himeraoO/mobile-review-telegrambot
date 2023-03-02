@@ -4,7 +4,6 @@ import com.github.himeraoO.mrtb.mrtbclient.dto.GroupInfo;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import javax.ws.rs.NotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,7 +53,7 @@ public class MRGroupClientImpl implements MRGroupClient{
     @Override
     public GroupInfo getGroupById(Integer id) {
         return groupInfos.stream().filter(groupInfo1 ->
-            groupInfo1.getId().equals(id)).findFirst().orElseThrow(NotFoundException::new);
+            groupInfo1.getId().equals(id)).findFirst().orElse(new GroupInfo())/*.orElseThrow(NotFoundException::new)*/;
     }
 
 }
