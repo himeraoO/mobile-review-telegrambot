@@ -26,3 +26,8 @@
 ## 0.6.0-SNAPSHOT
 
 *   MRTB-7: added command /removeGroupSub for delete group subscription.
+
+## 0.7.0-SNAPSHOT
+
+*   MRTB-4: added ability to send notifications about new articles/posts
+

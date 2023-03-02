@@ -16,9 +16,6 @@ public class StartCommand implements Command {
     public final static String START_MESSAGE = "Привет. Я Mobile-review Telegram Bot. Я помогу тебе быть в курсе последних " +
             "статей, обзоров и новостей.";
 
-    // Здесь не добавляем сервис через получение из Application Context.
-    // Потому что если это сделать так, то будет циклическая зависимость, которая
-    // ломает работу приложения.
     public StartCommand(SendBotMessageService sendBotMessageService, TelegramUserService telegramUserService) {
         this.sendBotMessageService = sendBotMessageService;
         this.telegramUserService = telegramUserService;

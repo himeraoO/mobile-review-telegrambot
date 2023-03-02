@@ -44,6 +44,7 @@ public class GroupSubServiceTest {
         GroupSub expectedGroupSub = new GroupSub();
         expectedGroupSub.setId(groupInfo.getId());
         expectedGroupSub.setTitle(groupInfo.getTitle());
+        expectedGroupSub.setLastArticleId(0);
         expectedGroupSub.addUser(newUser);
 
         //when
